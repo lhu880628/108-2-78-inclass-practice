@@ -1,0 +1,16 @@
+"0","dialogue <- c('小明說：""明天不用上課。""',"
+"0","               '小花說：""真的嗎？""')"
+"2","Warning message:
+"
+"2","In strsplit(code, ""\n"", fixed = TRUE) :"
+"2","
+ "
+"2"," input string 1 is invalid in this locale
+"
+"0","cat(dialogue, sep=""\n"")"
+"1","小明說：""明天不用上課。"""
+"1","
+"
+"1","小花說：""真的嗎？"""
+"1","
+"
