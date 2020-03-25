@@ -1,0 +1,12 @@
+"0","library(lubridate)"
+"2","package ．lubridate・ was built under R version 3.5.3"
+"2","
+Attaching package: ．lubridate・
+
+"
+"2","The following object is masked from ．package:base・:
+
+    date
+
+"
+"0","studentTime = c(ymd_hms(""2020-03-04T06:56:29Z""),ymd_hms(""2020-03-11 14:16:43"",tz=""Asia/Taipei""),ymd_hms(""2020-03-11 14:34:33"",tz=""Asia/Taipei""))"
