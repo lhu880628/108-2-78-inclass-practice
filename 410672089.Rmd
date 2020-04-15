@@ -105,4 +105,116 @@ library(lubridate)
 
 studentTime = c(ymd_hms("2020-03-04T06:56:29Z"),ymd_hms("2020-03-11 14:16:43",tz="Asia/Taipei"),ymd_hms("2020-03-11 14:34:33",tz="Asia/Taipei"))
 ```
+```{r}
+listExample <- 
+  list(
+    student="小明",
+    `學期`=list(
+      `108-1`=list(
+        list(
+          name="個體經濟學",
+          teacher="Alice",
+          grade=85
+        )
+      ),
+      `108-2`=list(
+        list(
+          name="總體經濟學",
+          teacher="Mark",
+          grade=78
+        )
+      )
+    )
+  )
+# 有多少位置可選：
+length(listExample)
+```
+
+
+
+
+
+
+
+
+
+
+
+```{r}
+listExample[[1]]
+listExample[[2]]
+```
+```{r}
+get1 <- listExample[["學期"]]
+get2 <- listExample["學期"]
+```
+
+```{r}
+str(get1)
+
+```
+
+```{r}
+str(get2)
+```
+
+
+
+```{r}
+get1$'108-1' -> get1_layer1
+str(get1_layer1)
+```
+```{r}
+get1_layer1[[1]] -> get1_layer2
+str(get1_layer2)
+```
+```{r}
+get1_layer2$teacher
+```
+```{r}
+get1$'108-1'[[1]]$teacher
+```
+
+```{r}
+get2[[1]][["108-1"]][[1]]$teacher
+```
+
+
+```{r}
+listExample[["學期"]]$`108-1`[[1]]$teacher
+```
+```{r}
+today <- list(
+  list("台北市",c(highest_temp = 25),c(lowest_temp = 18)),
+  list("新北市",c(highest_temp = 24),c(lowest_temp = 15)))
+tomorrow <- list(
+  list("台北市",c(highest_temp = 25),c(lowest_temp = 18)),
+  list("新北市",c(highest_temp = 24),c(lowest_temp = 15)))
+
+weather <- list(today,tomorrow)
+
+str(weather)
+```
+```{r}
+today[[1]][[2]]
+```
+
+```{r}
+today <- list(
+  list("台北市",
+       highest_temp=c(highest_temp = 25),        lowest_temp =c(lowest_tem = 18)),
+  list("新北市",
+       highest_temp=c(highest_temp = 24),
+       lowest_temp=c(lowest_temp = 15)))
+
+
+str(today)
+```
+```{r}
+today[[1]]$highest_temp
+```
+
+```{r}
+
+```
 
