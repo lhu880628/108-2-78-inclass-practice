@@ -444,6 +444,9 @@ example <- list(
 ```
 ```{r}
 str(example[c("name","height")])
+```{r}
+
+```
 
 pick_above170 <- example$height >= 170
 example$height
@@ -477,10 +480,27 @@ table(transcript100to103$學屆[pick_above85])
 ```
 
 
+```{r}
+jsonlite::fromJSON("https://www.dropbox.com/s/3uijub7xheib405/list_victimAges_female.json?dl=1", simplifyDataFrame = F) -> list_victimAges_female
+```
+
+
+```{r}
+str(list_victimAges_female)
+View(list_victimAges_female$`數目`)
+sum(list_victimAges_female$`數目`)
+sum(list_victimAges_female$`數目`, na.rm=T)
+```
 
 
 
+```{r}
+levels(list_victimAges_female$年齡層) -> levels_ages
+print(levels_ages)
 
+```
 
+```{r}
 
+```
 
